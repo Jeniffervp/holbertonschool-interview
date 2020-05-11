@@ -8,12 +8,11 @@ def minOperations(n):
     neccesary to copy and paste n times
     """
 
-    if not n:
+    if not n or n <= 2:
         return 0
 
     mov = 0
-
-    if n <= 2 or n % 2 == 1 and n % 3 == 1:
+    if n % 2 == 1 and n % 3 == 1:
         return n
 
     i = 2
