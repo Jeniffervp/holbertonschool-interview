@@ -8,7 +8,7 @@ def minOperations(n):
     neccesary to copy and paste n times
     """
 
-    if not n or n <= 2:
+    if not n or n < 2:
         return 0
 
     mov = 0
