@@ -1,7 +1,12 @@
 #!/usr/bin/python3
+""" Initialize the file """
 
 
 def minOperations(n):
+    """
+    Function to return the minimum operations
+    neccesary to copy and paste n times
+    """
 
     if not n:
         return 0
