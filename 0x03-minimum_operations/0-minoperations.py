@@ -11,6 +11,9 @@ def minOperations(n):
     if not n or n < 2:
         return 0
 
+    if n % 2 == 1 and n % 3 == 1:
+        return n
+
     mov = 0
     i = 2
     while i <= n:
