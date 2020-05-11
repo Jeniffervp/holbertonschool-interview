@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def minOperations(n):
 
     if not n:
