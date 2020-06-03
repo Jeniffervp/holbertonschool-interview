@@ -11,9 +11,9 @@ cont = 0
 try:
     for fl in sys.stdin:
         metrics = fl.split(" ")
-        status = metrics[-2]
 
         if len(metrics) > 2:
+            status = metrics[-2]
             size_file += int(metrics[-1])
             cont += 1
             if status in status_files.keys():
