@@ -23,3 +23,8 @@ try:
 
 except:
     pass
+
+finally:
+    print('File size: {}'.format(size_file))
+    for k, v in sorted(status_files.items()):
+        print("{}: {}".format(k, v))
