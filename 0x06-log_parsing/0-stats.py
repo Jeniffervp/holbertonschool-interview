@@ -17,9 +17,10 @@ try:
         size_file += int(metrics[-1])
         cont += 1
         if cont % 10 == 0:
-            print('File size: {}'.format(size_file))
+            print("File size: {}".format(size_file))
             for k, v in sorted(status_files.items()):
-                print("{}: {}".format(k, v))
+                if v != 0:
+                    print("{}: {}".format(k, v))
 
 except:
     pass
@@ -27,4 +28,5 @@ except:
 finally:
     print('File size: {}'.format(size_file))
     for k, v in sorted(status_files.items()):
-        print("{}: {}".format(k, v))
+        if v != 0:
+            print("{}: {}".format(k, v))
