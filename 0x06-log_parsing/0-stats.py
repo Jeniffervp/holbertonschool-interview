@@ -12,11 +12,12 @@ try:
     for fl in sys.stdin:
         metrics = fl.split(" ")
         status = metrics[-2]
-        size_file += int(metrics[-1])
-        cont += 1
 
-        if status in status_files.keys():
-            status_files[status] = status_files.get(status) + 1
+        if len(metrics) > 2:
+            size_file += int(metrics[-1])
+            cont += 1
+            if status in status_files.keys():
+                status_files[status] = status_files.get(status) + 1
         if cont % 10 == 0:
             print("File size: {}".format(size_file))
             for k, v in sorted(status_files.items()):
