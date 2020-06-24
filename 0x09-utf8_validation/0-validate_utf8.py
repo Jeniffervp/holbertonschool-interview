@@ -1,18 +1,22 @@
 #!/usr/bin/python3
-""" Inirialize the file """
+""" Start the file """
 
 
 def validUTF8(data):
-    """ Function to validate utf-8 """
+    """ validate utf-8 in data comming """
 
-    successive_10 = 0
-    for b in data:
-        b = bin(b).replace('0b', '').rjust(8, '0')
-        if successive_10 != 0:
-            successive_10 -= 1
-            if not b.startswith('10'):
+    bin_10 = 0
+    for bit in data:
+        bit = '{0:08b}'.format(bit)[-8:]
+        if bin_10 != 0:
+            bin_10 -= 1
+            if not bit.startswith('10'):
                 return False
-        elif b[0] == '1':
-            successive_10 = len(b.split('0')[0]) - 1
-
+        elif bit[0] == '1':
+            bin_10 = len(bit.split('0')[0])
+            if bin_10 == 1 or bin_10 > 4:
+                return False
+            bin_10 -= 1
+    if bin_10 != 0:
+        return False
     return True
