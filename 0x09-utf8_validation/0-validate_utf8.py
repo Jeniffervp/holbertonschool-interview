@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-
-import sys
+""" Inirialize the file """
 
 
 def validUTF8(data):
+    """ Function to validate utf-8 """
 
     successive_10 = 0
-
     for b in data:
         b = bin(b).replace('0b', '').rjust(8, '0')
         if successive_10 != 0:
