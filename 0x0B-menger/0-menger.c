@@ -1,15 +1,14 @@
 #include "menger.h"
 
 /**
- * menger - function to print a menger sponge
- * @level: Level of the menger sponge to be drawn
- *
+ * menger - print a menger sponge
+ * @level: Level of the menger sponge
  */
 
 void menger(int level)
 {
 	int i, j, pow_result, divI, divJ;
-	char c;
+	char ch;
 
 	pow_result = pow(3, level);
 
