@@ -44,6 +44,9 @@ def ableSpace(board, row, col, length):
 
     return True
 
+
+def nQueenPlace(board, col, size) :
+
     ''' Place the posible nQueen's position in a Board '''
 
     if (col == length):
