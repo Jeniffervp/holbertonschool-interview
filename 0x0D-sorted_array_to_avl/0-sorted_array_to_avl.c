@@ -29,6 +29,7 @@ avl_t *avl_insert_node(int *ar, size_t f, size_t l, avl_t *r)
 {
 	size_t half;
 	avl_t *new;
+
 	if (f > l)
 		return (NULL);
 	half = (f + l) / 2;
@@ -53,6 +54,7 @@ avl_t *avl_insert_node(int *ar, size_t f, size_t l, avl_t *r)
 avl_t *create_node(avl_t *r, size_t dt)
 {
 	avl_t *n_Node;
+
 	n_Node = malloc(sizeof(avl_t));
 	if (!n_Node)
 		return (NULL);
